@@ -16,14 +16,14 @@
 
 <body>
     <div class="homeT">
-        <h1 class="title">Bugetting</h1>
+        <h1 class="fm">Bugetting</h1>
         <label for="spent">Spent: </label>
         <input type="number" id="spent" name="spent">
         <ul id="list">
 
         </ul>
         <h3 id="buget">Buget: 1000</h3>
-        <h2 class="title">Alterinates</h3>
+        <h2 class="fm">Alterinates</h3>
             
             <script>
                 function spent() {
@@ -34,6 +34,8 @@
                         li.classList.add("num");
                         list.appendChild(li);
                     });
+
+                    
                 }
 
                 spent()
@@ -48,6 +50,20 @@
 
                     remain = Number(buget.innerText.substr(6)) - remain;
                     console.log("spent")
+
+                    if(remain >= 15000) {
+                        console.log("500")
+                    } else if(remain >= 100000) {
+
+                    } else if(remain >= 5000) {
+                        
+                    } else if(remain >= 2500) {
+                        
+                    } else if(remain >= 1250) {
+                        
+                    } else if(remain >= 500) {
+                        
+                    }
 
                     buget.innerText = "Buget: " + remain;
 
