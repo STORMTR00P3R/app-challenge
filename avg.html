@@ -22,7 +22,7 @@
         <ul id="list">
 
         </ul>
-        <h3 id="buget">Buget: 1000</h3>
+        <h3 id="budget">Budget: 1000</h3>
         <h2 class="fm">Alternates</h3>
             
             <script>
@@ -43,12 +43,12 @@
 
                 function sub() {
                     // Get the value from the inputs
-                    var buget = document.getElementById("buget");
+                    var budget = document.getElementById("budget");
                     var spent = document.getElementById("spent");
                     var remain = Math.abs(Number(spent.value));
 
 
-                    remain = Number(buget.innerText.substr(6)) - remain;
+                    remain = Number(budget.innerText.substr(6)) - remain;
                     console.log("spent")
 
                     if(remain >= 15000) {
@@ -65,7 +65,7 @@
                         
                     }
 
-                    buget.innerText = "Buget: " + remain;
+                    budget.innerText = "budget: " + remain;
 
                     list = document.getElementById("list");
                     let li = document.createElement("li");
