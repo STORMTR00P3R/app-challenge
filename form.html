@@ -42,10 +42,13 @@
     </div>
 
 
-    <img src="images/bank.jpg" alt="bank" height="175px">
+    <!-- <img src="images/bank.jpg" alt="bank" height="175px"> -->
 
     <div class="rightm">
         <form id="myForm">
+            <label for="mRev">ZipCode:</label>
+            <input class="grey2" type="number" id="zip" name="mRev" oninput="spend()"><br><br>
+
             <label for="mRev">Monthly Revenue:</label>
             <input class="grey2" type="number" id="mRev" name="mRev" oninput="spend()"><br><br>
 
@@ -56,13 +59,15 @@
             <label for="credit">Credit Score:</label>
             <input class="grey2" type="number" id="credit" name="credit" oninput="spend()"><br><br>
 
-            <p id="ans">(Your Number Will Be Shown Here)</p>
+            <p id="ans">(Your Allowed Spending Will Be Shown Here)</p>
         </form>
-        <button type="button" onclick="estimate(); return false;">Estimate Based On Location (Unreliable)</button>
+        <button class="s" type="button" onclick="estimate(); return false;">Estimate Based On Location (Unreliable)</button>
+        <div class="n">  
+        <a href="avg.html"><button>Budgeting</button></a>
+        </div>  
         <!-- <button type="button" onclick="form(); return false;">Find Results</button> -->
     </div>
     </form>
-
 
     <div class="over">
         <div class="flip">
@@ -113,7 +118,7 @@
                 </div>
                 <div class="back">
                     <img src="images/chips.jpg" alt="chips" height="150px">
-                    <h1>eeee</h1>
+                    <h1>Set your monthly spending limit and receive reminders to stay within your budget.</h1>
                 </div>
             </div>
         </div>
@@ -135,13 +140,21 @@
             // Update the num text
             if (ans >= 1000 && cred > 300) {
                 ans = ans * .50;
-                document.getElementById("ans").innerText = ans;
+                document.getElementById("ans").innerText = "$" + ans;
             } else if (ans >= 50000 && cred > 300) {
                 ans = ans * .75;
-                document.getElementById("ans").innerText = ans;
+                document.getElementById("ans").innerText = "$" + ans;
+            } else if (ans >= 0) {
+                document.getElementById("ans").innerText = "Start Saving";
             } else {
-                document.getElementById("ans").innerText = "Nuh uh fella";
+                document.getElementById("ans").innerText = "Dont Spend";
             }
+        }
+
+        function estimate() {
+            document.getElementById("mRev").value = 4902;
+            document.getElementById("mEx").value = 2255;
+            document.getElementById("credit").value = 695;
         }
     </script>
     </div>

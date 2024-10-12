@@ -4,11 +4,13 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kalnia+Glaze:wght@100..700&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="button.css" rel="stylesheet" type="text/css" />
     <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"WIP"</title>
@@ -22,9 +24,12 @@
         <ul id="list">
 
         </ul>
-        <h3 id="budget">Budget: 1000</h3>
+        <h3 id="budget">Budget: 100000</h3>
         <h2 class="fm">Alternates</h3>
-            
+                <img class="lim" src="images/ss.png" alt="ss1" id="p1" height="500px">
+                <img class="lim2" src="images/ss2.png" alt="ss2" id="p2" height="500px">
+                <img src="images/ss3.png" alt="ss3" id="p3" height="500px">
+
             <script>
                 function spent() {
                     list = document.getElementById("list");
@@ -35,7 +40,7 @@
                         list.appendChild(li);
                     });
 
-                    
+
                 }
 
                 spent()
@@ -47,22 +52,34 @@
                     var spent = document.getElementById("spent");
                     var remain = Math.abs(Number(spent.value));
 
+                    console.log(remain)
+                    console.log(budget.innerText.substr(8))
+                    remain = Number(budget.innerText.substr(8)) - remain;
+                    console.log(remain)
 
-                    remain = Number(budget.innerText.substr(6)) - remain;
-                    console.log("spent")
-
-                    if(remain >= 15000) {
-                        console.log("15000")
-                    } else if(remain >= 100000) {
-
-                    } else if(remain >= 5000) {
-                        
-                    } else if(remain >= 2500) {
-                        
-                    } else if(remain >= 1250) {
-                        
-                    } else if(remain >= 500) {
-                        
+                    if (remain <= 60) {
+                        // document.getElementById("p1").style.display = "block";
+                        // document.getElementById("p2").style.display = "block";
+                        // document.getElementById("p3").style.display = "block";
+                        document.getElementById("p3").style.display = "none";
+                        document.getElementById("p2").style.display = "none";
+                        document.getElementById("p1").style.display = "none";
+                    }
+                    else if (remain <= 300) {
+                        document.getElementById("p1").style.display = "block";
+                        // document.getElementById("p2").style.display = "block";
+                        // document.getElementById("p3").style.display = "block";
+                        document.getElementById("p3").style.display = "none";
+                        document.getElementById("p2").style.display = "none";
+                    } else if (remain <= 6000) {
+                        document.getElementById("p1").style.display = "block";
+                        document.getElementById("p2").style.display = "block";
+                        // document.getElementById("p3").style.display = "block";
+                        document.getElementById("p3").style.display = "none";
+                    }  else if (remain > 6000) {
+                        document.getElementById("p1").style.display = "block";
+                        document.getElementById("p2").style.display = "block";
+                        document.getElementById("p3").style.display = "block";
                     }
 
                     budget.innerText = "budget: " + remain;
@@ -76,15 +93,17 @@
 
                 // Enter is pressed
                 document.getElementById("spent").addEventListener("keyup", function (event) {
-                    if(document.getElementById("spent").value != "") {
-                        if (event.keyCode == 13) {  
+                    if (document.getElementById("spent").value != "") {
+                        if (event.keyCode == 13) {
                             console.log("enter pressed")
                             sub();
                         }
                     }
                 });
             </script>
-            <a href="form.html"><button>Back</button></a>
+            <div class="move">
+                <a href="form.html">Back</a>
+            </div>
     </div>
 </body>
 

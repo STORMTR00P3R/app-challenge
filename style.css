@@ -53,11 +53,11 @@ button {
 }
 
 .wid {
-    margin-right: 60%;
+
 }
 
 .wid2 {
-    margin-left: 60%;
+    margin-top: 5%;
 }
 
 button:hover {
@@ -122,14 +122,13 @@ h2 {
 
 h3 {
     color: aliceblue;
+    font-weight: lighter;
 }
 
 .title {
-    margin-left: 85%;
-    margin-right: 20%;
+    margin-left: 100%;
     width: 110%;
     border-radius: 10px;
-    background-color: #282828;
 }
 
 footer {
@@ -166,7 +165,6 @@ ul {
     display: block;
     width: 5%;
     border-radius: 10px;
-    background-color: #282828;
 }
 
 .imgwrap {
@@ -180,8 +178,8 @@ ul {
     display:flex;
     gap: 10%;
     height: 100%;
-    width: 100%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 12.5%;
 }
 
 .flip {
@@ -204,6 +202,7 @@ ul {
     position: relative;
     width: 100%;
     height: 100%;
+    font-size: 9px;
     text-align: center;
     transition: transform 0.4s;
     transform-style: preserve-3d;
@@ -281,8 +280,12 @@ ul {
     margin-right: 25px;
 }
 
+.is {
+    padding-top: 10%;
+}
+
 .d {
-    padding-top: 60%;
+    padding-top: 10%;
 }
 
 .bg {
@@ -314,4 +317,15 @@ ul {
     color: aliceblue;
     font-size: 30px;
     margin-top: 30px;
+}
+
+.s {
+    margin-left: -10%;
+    margin-bottom: 2%;
+}
+
+.n {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 48%;
 }
