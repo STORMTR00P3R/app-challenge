@@ -10,18 +10,20 @@ button:hover {
 
 body {
     background-color: #181818;
-    font-family: 'Cinzel';
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .lim {
-    margin-bottom: -0.8%;
+    margin-bottom: -8px;
 }
 
 .lim2 {
-    margin-bottom: -1%;
+    width: 1000px;
+    margin-bottom: -10px;
 }
 
 a {
+    font-size: 25px;
     padding: 10px;
     border-radius: 5px;
     background-color: #282828;
@@ -31,4 +33,24 @@ a {
 
 .move {
     margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+.homeT {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    font-size: 16px!important;
+    padding: 0!important;
+    margin-top: 0!important;
+    border-top: 0!important;
+    margin-bottom: -11px!important;
+    color: aliceblue!important;
 }

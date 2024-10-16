@@ -24,87 +24,93 @@
         <ul id="list">
 
         </ul>
-        <h3 id="budget">Budget: 100000</h3>
-        <h2 class="fm">Alternates</h3>
-                <img class="lim" src="images/ss.png" alt="ss1" id="p1" height="500px">
-                <img class="lim2" src="images/ss2.png" alt="ss2" id="p2" height="500px">
-                <img src="images/ss3.png" alt="ss3" id="p3" height="500px">
+        <h3 id="budget">Budget: 30000</h3>
+        <h2 class="fm">Alternates</h2>
 
-            <script>
-                function spent() {
-                    list = document.getElementById("list");
-                    num.forEach((s) => {
-                        let li = document.createElement("li");
-                        li.innerText = s;
-                        li.classList.add("num");
-                        list.appendChild(li);
-                    });
-
-
-                }
-
-                spent()
-                console.log(document.getElementById("spent"))
-
-                function sub() {
-                    // Get the value from the inputs
-                    var budget = document.getElementById("budget");
-                    var spent = document.getElementById("spent");
-                    var remain = Math.abs(Number(spent.value));
-
-                    console.log(remain)
-                    console.log(budget.innerText.substr(8))
-                    remain = Number(budget.innerText.substr(8)) - remain;
-                    console.log(remain)
-
-                    if (remain <= 60) {
-                        // document.getElementById("p1").style.display = "block";
-                        // document.getElementById("p2").style.display = "block";
-                        // document.getElementById("p3").style.display = "block";
-                        document.getElementById("p3").style.display = "none";
-                        document.getElementById("p2").style.display = "none";
-                        document.getElementById("p1").style.display = "none";
-                    }
-                    else if (remain <= 300) {
-                        document.getElementById("p1").style.display = "block";
-                        // document.getElementById("p2").style.display = "block";
-                        // document.getElementById("p3").style.display = "block";
-                        document.getElementById("p3").style.display = "none";
-                        document.getElementById("p2").style.display = "none";
-                    } else if (remain <= 6000) {
-                        document.getElementById("p1").style.display = "block";
-                        document.getElementById("p2").style.display = "block";
-                        // document.getElementById("p3").style.display = "block";
-                        document.getElementById("p3").style.display = "none";
-                    }  else if (remain > 6000) {
-                        document.getElementById("p1").style.display = "block";
-                        document.getElementById("p2").style.display = "block";
-                        document.getElementById("p3").style.display = "block";
-                    }
-
-                    budget.innerText = "budget: " + remain;
-
-                    list = document.getElementById("list");
+        <script>
+            function spent() {
+                list = document.getElementById("list");
+                num.forEach((s) => {
                     let li = document.createElement("li");
-                    li.innerText = "11/11 $" + spent.value;
+                    li.innerText = s;
                     li.classList.add("num");
                     list.appendChild(li);
+                });
+
+
+            }
+
+            spent()
+            console.log(document.getElementById("spent"))
+
+            function sub() {
+                // Get the value from the inputs
+                var budget = document.getElementById("budget");
+                var spent = document.getElementById("spent");
+                var remain = Math.abs(Number(spent.value));
+
+                console.log(remain)
+                console.log(budget.innerText.substr(8))
+                remain = Number(budget.innerText.substr(8)) - remain;
+                console.log(remain)
+
+                if (remain <= 60) {
+                    // document.getElementById("p1").style.display = "block";
+                    // document.getElementById("p2").style.display = "block";
+                    // document.getElementById("p3").style.display = "block";
+                    document.getElementById("p3").style.display = "none";
+                    document.getElementById("p2").style.display = "none";
+                    document.getElementById("p1").style.display = "none";
+                }
+                else if (remain <= 300) {
+                    document.getElementById("p1").style.display = "block";
+                    // document.getElementById("p2").style.display = "block";
+                    // document.getElementById("p3").style.display = "block";
+                    document.getElementById("p3").style.display = "none";
+                    document.getElementById("p2").style.display = "none";
+                } else if (remain <= 6000) {
+                    document.getElementById("p1").style.display = "block";
+                    document.getElementById("p2").style.display = "block";
+                    // document.getElementById("p3").style.display = "block";
+                    document.getElementById("p3").style.display = "none";
+                } else if (remain > 6000) {
+                    document.getElementById("p1").style.display = "block";
+                    document.getElementById("p2").style.display = "block";
+                    document.getElementById("p3").style.display = "block";
                 }
 
-                // Enter is pressed
-                document.getElementById("spent").addEventListener("keyup", function (event) {
-                    if (document.getElementById("spent").value != "") {
-                        if (event.keyCode == 13) {
-                            console.log("enter pressed")
-                            sub();
-                        }
+                budget.innerText = "budget: " + remain;
+
+                list = document.getElementById("list");
+                let li = document.createElement("li");
+                li.innerText = "11/11 $" + spent.value;
+                li.classList.add("num");
+                list.appendChild(li);
+            }
+
+            // Enter is pressed
+            document.getElementById("spent").addEventListener("keyup", function (event) {
+                if (document.getElementById("spent").value != "") {
+                    if (event.keyCode == 13) {
+                        console.log("enter pressed")
+                        sub();
                     }
-                });
-            </script>
-            <div class="move">
-                <a href="form.html">Back</a>
-            </div>
+                }
+            });
+        </script>
     </div>
+    
+    <img class="lim" src="images/ss.png" alt="ss1" id="p1" height="100px">
+    <img class="lim2" src="images/ss2.png" alt="ss2" id="p2">
+    <img src="images/ss3.png" alt="ss3" id="p3" height="500px">
+    <div class="move">
+        <a href="form.html">Back</a>
+    </div>
+
+    <footer>
+        <p>Copyright 2024. BetWise. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>

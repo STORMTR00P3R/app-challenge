@@ -1,5 +1,5 @@
 button {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     border: none;
     /*background-color: #cb6ce6;*/
     color: white;
@@ -49,7 +49,6 @@ button {
 
 .rightm {
     margin-top: 10%;
-    margin-left: 5%;
 }
 
 .wid {
@@ -61,39 +60,39 @@ button {
 }
 
 button:hover {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     opacity: 0.6;
 }
 
 .home {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     position: fixed;
     top: 10px;
     right: 10px;
 }
 
 a {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: aliceblue;
 }
 
 body {
     background-color: gray;
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     /*background-image: linear-gradient(to right, #8c52ff, #ff914d);*/
 }
 
 .cinzel {
-    font-family: "Cinzel", serif;
+    font-family: 'Courier New', Courier, monospace;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 .formT {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     position: fixed;
     top: 0;
@@ -101,12 +100,12 @@ body {
 }
 
 .homeT {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
 
 .h35 {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     margin-left: 10%;
     margin-right: 10%;
@@ -132,25 +131,25 @@ h3 {
 }
 
 footer {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     position: fixed;
     bottom: 0;
     left: 10px;
 }
 
 p {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
 
 label {
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
 
 input {
     border-radius: 5px;
-    font-family: "Cinzel";
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     color: rgb(255, 255, 255);
 }
@@ -179,7 +178,7 @@ ul {
     gap: 10%;
     height: 100%;
     width: 85%;
-    margin-left: 12.5%;
+    margin-left: 12%;
 }
 
 .flip {
@@ -233,7 +232,7 @@ ul {
 
 .im {
     font-size: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     width: 36px;
     height: 36px;
@@ -295,6 +294,7 @@ ul {
 .hi {
     font-size: 20px;
     border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent; 
 }
 
@@ -320,12 +320,14 @@ ul {
 }
 
 .s {
-    margin-left: -10%;
+    margin-left: -10%;  
     margin-bottom: 2%;
 }
 
 .n {
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-right: 48%;
+    margin-left: 16%;
+    display: flex;
+    justify-content: center;
 }
