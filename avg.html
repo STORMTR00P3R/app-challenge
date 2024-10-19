@@ -26,6 +26,7 @@
         </ul>
         <h3 id="budget">Budget: 30000</h3>
         <h2 class="fm">Alternates</h2>
+        <h3 id="broke"></h3>
 
         <script>
             function spent() {
@@ -54,6 +55,13 @@
                 remain = Number(budget.innerText.substr(8)) - remain;
                 console.log(remain)
 
+                if (remain <= 0) {
+                    document.getElementById("broke").textContent = "You cant afford anything";
+                    document.getElementById("p3").style.display = "none";
+                    document.getElementById("p2").style.display = "none";
+                    document.getElementById("p1").style.display = "none";
+                }
+
                 if (remain <= 60) {
                     // document.getElementById("p1").style.display = "block";
                     // document.getElementById("p2").style.display = "block";
@@ -61,8 +69,7 @@
                     document.getElementById("p3").style.display = "none";
                     document.getElementById("p2").style.display = "none";
                     document.getElementById("p1").style.display = "none";
-                }
-                else if (remain <= 300) {
+                } else if (remain <= 300) {
                     document.getElementById("p1").style.display = "block";
                     // document.getElementById("p2").style.display = "block";
                     // document.getElementById("p3").style.display = "block";
@@ -79,7 +86,7 @@
                     document.getElementById("p3").style.display = "block";
                 }
 
-                budget.innerText = "budget: " + remain;
+                budget.innerText = "Budget: " + remain;
 
                 list = document.getElementById("list");
                 let li = document.createElement("li");
@@ -99,7 +106,7 @@
             });
         </script>
     </div>
-    
+
     <img class="lim" src="images/ss.png" alt="ss1" id="p1" height="100px">
     <img class="lim2" src="images/ss2.png" alt="ss2" id="p2">
     <img src="images/ss3.png" alt="ss3" id="p3" height="500px">
