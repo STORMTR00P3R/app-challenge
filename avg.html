@@ -13,7 +13,7 @@
     <link href="button.css" rel="stylesheet" type="text/css" />
     <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"WIP"</title>
+    <title>BetWise</title>
 </head>
 
 <body class="bg">
@@ -24,7 +24,7 @@
         <ul id="list">
 
         </ul>
-        <h3 id="budget">Budget: 30000</h3>
+        <h3 id="budget">Budget: 1323.5</h3>
         <h2 class="fm">Alternates</h2>
         <h3 id="broke"></h3>
 
@@ -57,40 +57,40 @@
 
                 if (remain <= 0) {
                     document.getElementById("broke").textContent = "You cant afford anything";
-                    document.getElementById("p3").style.display = "none";
-                    document.getElementById("p2").style.display = "none";
+                    // document.getElementById("p3").style.display = "none";
+                    // document.getElementById("p2").style.display = "none";
                     document.getElementById("p1").style.display = "none";
                 }
 
-                if (remain <= 60) {
-                    // document.getElementById("p1").style.display = "block";
-                    // document.getElementById("p2").style.display = "block";
-                    // document.getElementById("p3").style.display = "block";
-                    document.getElementById("p3").style.display = "none";
-                    document.getElementById("p2").style.display = "none";
-                    document.getElementById("p1").style.display = "none";
-                } else if (remain <= 300) {
-                    document.getElementById("p1").style.display = "block";
-                    // document.getElementById("p2").style.display = "block";
-                    // document.getElementById("p3").style.display = "block";
-                    document.getElementById("p3").style.display = "none";
-                    document.getElementById("p2").style.display = "none";
-                } else if (remain <= 6000) {
-                    document.getElementById("p1").style.display = "block";
-                    document.getElementById("p2").style.display = "block";
-                    // document.getElementById("p3").style.display = "block";
-                    document.getElementById("p3").style.display = "none";
-                } else if (remain > 6000) {
-                    document.getElementById("p1").style.display = "block";
-                    document.getElementById("p2").style.display = "block";
-                    document.getElementById("p3").style.display = "block";
-                }
+                // if (remain <= 60) {
+                //     // document.getElementById("p1").style.display = "block";
+                //     // document.getElementById("p2").style.display = "block";
+                //     // document.getElementById("p3").style.display = "block";
+                //     document.getElementById("p3").style.display = "none";
+                //     document.getElementById("p2").style.display = "none";
+                //     document.getElementById("p1").style.display = "none";
+                // } else if (remain <= 300) {
+                //     document.getElementById("p1").style.display = "block";
+                //     // document.getElementById("p2").style.display = "block";
+                //     // document.getElementById("p3").style.display = "block";
+                //     document.getElementById("p3").style.display = "none";
+                //     document.getElementById("p2").style.display = "none";
+                // } else if (remain <= 6000) {
+                //     document.getElementById("p1").style.display = "block";
+                //     document.getElementById("p2").style.display = "block";
+                //     // document.getElementById("p3").style.display = "block";
+                //     document.getElementById("p3").style.display = "none";
+                // } else if (remain > 6000) {
+                //     document.getElementById("p1").style.display = "block";
+                //     document.getElementById("p2").style.display = "block";
+                //     document.getElementById("p3").style.display = "block";
+                // }
 
                 budget.innerText = "Budget: " + remain;
 
                 list = document.getElementById("list");
                 let li = document.createElement("li");
-                li.innerText = "11/11 $" + spent.value;
+                li.innerText = "10/23 $" + spent.value;
                 li.classList.add("num");
                 list.appendChild(li);
             }
@@ -108,8 +108,8 @@
     </div>
 
     <img class="lim" src="images/ss.png" alt="ss1" id="p1" height="100px">
-    <img class="lim2" src="images/ss2.png" alt="ss2" id="p2">
-    <img src="images/ss3.png" alt="ss3" id="p3" height="500px">
+    <!-- <img class="lim2" src="images/ss2.png" alt="ss2" id="p2">
+    <img src="images/ss3.png" alt="ss3" id="p3" height="500px"> -->
     <div class="move">
         <a href="form.html">Back</a>
     </div>
